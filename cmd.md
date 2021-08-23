@@ -29,3 +29,6 @@ git pull
 
 ### cambios sobre un archivo 
 git show archivo.txt
+
+### ver los cambios entre 2 commits
+git diff commit1 commit2
