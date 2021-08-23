@@ -27,4 +27,5 @@ git push
 ### traer los cambios de un repositorio remoto 
 git pull
 
-
+### cambios cobre un archivo 
+git show
