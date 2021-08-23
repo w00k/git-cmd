@@ -30,5 +30,5 @@ git pull
 ### cambios sobre un archivo 
 git show archivo.txt
 
-### ver los cambios entre 2 commits
+### ver los cambios entre 2 commits, commit2 debe ser el mas reciente, para leer de mejor manera los cambios
 git diff commit1 commit2
