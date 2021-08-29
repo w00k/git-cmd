@@ -43,4 +43,12 @@ git reset COMMIT --hard
 ### volver a la version anterior, pero lo que esta en staging, sigue en staging, es decir lo que esta en git add se mantiene 
 git reset COMMIT --soft
 
+### cambios especificos en los archivos 
+git log --stat 
+
+### volver a un commit especifico de un archivo 
+git checkout COMMIT archivo.txt 
+
+### volver a la version mas actualizada
+git checkout master archivo.txt 
 
