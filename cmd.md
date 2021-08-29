@@ -27,8 +27,20 @@ git push
 ### traer los cambios de un repositorio remoto 
 git pull
 
+## Ver cambios 
+
 ### cambios sobre un archivo 
 git show archivo.txt
 
 ### ver los cambios entre 2 commits, commit2 debe ser el mas reciente, para leer de mejor manera los cambios
 git diff commit1 commit2
+
+## Volver al pasado 
+
+### volver a una version anterior, todos los cambios 
+git reset COMMIT --hard
+
+### volver a la version anterior, pero lo que esta en staging, sigue en staging, es decir lo que esta en git add se mantiene 
+git reset COMMIT --soft
+
+
