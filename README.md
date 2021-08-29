@@ -9,8 +9,11 @@ git add file.txt file_v1.txt
 ### envia el archivo al repositorio control de versiones 
 git commit -m "comentario"
 
-### guardar todos los archivos con cambios
+### guardar todos los archivos con cambios en staging area
 git add .
+
+### guardo los archivos y hago commit, siempre que los archivos ya existan, no agrega los arvhicos nuevos
+git commit -am "comentario"
 
 ### status de mi base de datos local 
 git status 
