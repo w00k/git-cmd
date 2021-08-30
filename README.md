@@ -77,3 +77,6 @@ git merge // se hace un git fetch, seguido de git merge
 ## para traer los cambios del repositorios remotro y al directorio con un solo comando 
 git pull
 
+## Merge
+El merge se realiza desde la rama que uno se traera los cambios, no de donde estan los cambios.
+
