@@ -78,5 +78,8 @@ git merge // se hace un git fetch, seguido de git merge
 git pull
 
 ## Merge
+
 El merge se realiza desde la rama que uno se traera los cambios, no de donde estan los cambios.
+git merge branch_donde_estan_los_cambios
+
 
