@@ -82,4 +82,18 @@ git pull
 1. El merge se realiza desde la rama que uno se traera los cambios, no de donde estan los cambios.
 git merge branch_donde_estan_los_cambios
 
+## Agregar un repositorio remoto 
+
+1. Agregar un rpositorio remoto al repositorio local
+git remote add origin URL_REPO
+
+2. Revisar las versiones de origin y main 
+git remote -v 
+
+3. Antes de enviar los cambios al repositorio remoto, hay que hacer un merge, por tanto hay que hacer un:
+git pull origin main --allow-unrelated-histories 
+
+4. Ahora podemos subit los cambios
+git pull origin main 
+
 
