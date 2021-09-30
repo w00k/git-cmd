@@ -1,7 +1,9 @@
 # Comandos basicos de Git
 
 1. Inicio del repositorio
-git init 
+```bash 
+git init
+```
 
 2. Agrega el archivo o los archivos al repositorio 
 git add file.txt file_v1.txt
