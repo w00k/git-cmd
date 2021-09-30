@@ -173,7 +173,7 @@ git tag -a v0.1 -m "resultado de las primeras clases del curso" 6f4e648
 git tag
 ```
 
-4. Obtener el hash y el tag asociado, el uso del tag es que siempre este en el servidor remoto, para que los colacolboradores pueden ver en que estado esta la version.
+4. Obtener el hash y el tag asociado, el uso del tag es que siempre este en el servidor remoto, para que los coladores pueden ver en que estado esta la version.
 ```bash 
 git show-ref --tags
 ```
@@ -183,3 +183,7 @@ git show-ref --tags
 git push origin --tags 
 ```
 
+6. Borrar un tag 
+```bash 
+git tag -d dormido
+```
