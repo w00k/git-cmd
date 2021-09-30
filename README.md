@@ -93,7 +93,27 @@ git remote -v
 3. Antes de enviar los cambios al repositorio remoto, hay que hacer un merge, por tanto hay que hacer un:
 git pull origin main --allow-unrelated-histories 
 
-4. Ahora podemos subit los cambios
+4. Ahora podemos subir los cambios
 git pull origin main 
+
+## Tags y versiones en Git
+
+1. Ver toda la historia de mi proyecto, con lineas de ramas y commits 
+git log --all --graph --decorate --oneline
+
+1.1 Crear un alias, con el comando mas cool para ver la historia del repositorio 
+alias arbolito="git log --all --graph --decorate --oneline"
+
+2. Crear tag
+git tag -a v0.1 -m "resultado de las primeras clases del curso" 6f4e648
+
+3. Ver tags creados
+git tag
+
+4. Obtener el hash y el tag asociado, el uso del tag es que siempre este en el servidor remoto, para que los colacolboradores pueden ver en que estado esta la version.
+git show-ref --tags
+
+5. Publicar el tag en el repositorio remoto
+git push origin --tags 
 
 
