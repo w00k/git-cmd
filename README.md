@@ -187,3 +187,17 @@ git push origin --tags
 ```bash 
 git tag -d dormido
 ```
+
+## Ramas
+
+1. Muestras las ramas 
+```bash 
+git show-branch 
+git show-branch --all
+```
+
+2. Ver desde una app la historia del repositorio
+```bash 
+gitk 
+```
+
