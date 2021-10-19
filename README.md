@@ -201,3 +201,24 @@ git show-branch --all
 gitk 
 ```
 
+## Merge
+
+1. Primero ingregar a la rama base para el merge (la rama base, se trae los cambios de la rama con cambios y se hace el merge y se sube)
+```bash
+git checkout main
+```
+
+2. Traigo los cambios del repositorio en internet a local 
+```bash
+git pull origin main
+```
+
+3. Traigo los cambios desde la rama a la rama 
+```bash 
+git merge header
+```
+
+4. Subo los cambios
+```bash 
+git push origin main
+```
