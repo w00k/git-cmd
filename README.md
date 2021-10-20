@@ -222,3 +222,9 @@ git merge header
 ```bash 
 git push origin main
 ```
+
+## Pull Request
+
+El *pull request* lo revisa el lider del equipo o el devops (generalmente, en casos excepcionales el lider de desarrollo). 
+
+
