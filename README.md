@@ -227,4 +227,34 @@ git push origin main
 
 El *pull request* lo revisa el lider del equipo o el devops (generalmente, en casos excepcionales el lider de desarrollo). 
 
+## Forks o Bifurcaciones
+Es una caracter’stica œnica de GitHub en la que se crea una copia exacta del estado actual de un repositorio directamente en GitHub, Žste repositorio podr‡ servir como otro origen y se podr‡ clonar (como cualquier otro repositorio), en pocas palabras, lo podremos utilizar como un git cualquiera
+.
+Un fork es como una bifurcaci—n del repositorio completo, tiene una historia en comœn, pero de repente se bifurca y pueden variar los cambios, ya que ambos proyectos podr‡n ser modificados en paralelo y para estar al d’a un colaborador tendr‡ que estar actualizando su fork con la informaci—n del original.
+.
+Al hacer un fork de un poryecto en GitHub, te conviertes en due–@ del repositorio fork, puedes trabajar en Žste con todos los permisos, pero es un repositorio completamente diferente que el original, teniendo alguna historia en comœn.
+.
+Los forks son importantes porque es la manera en la que funciona el open source, ya que, una persona puede no ser colaborador de un proyecto, pero puede contribu’r al mismo, haciendo mejor software que pueda ser utilizado por cualquiera.
+.
+Al hacer un fork, GitHub sabe que se hizo el fork del proyecto, por lo que se le permite al colaborador hacer pull request desde su repositorio propio.
+Trabajando con m‡s de 1 repositorio remoto
+Cuando trabajas en un proyecto que existe en diferentes repositorios remotos (normalmente a causa de un fork) es muy probable que desees poder trabajar con ambos repositorios, para Žsto puedes crear un remoto adicional desde consola.
 
+```bash 
+git remote add <nombre_del_remoto> <url_del_remoto> 
+git remote upstream https://github.com/freddier/hyperblog
+```
+
+Al crear un remoto adicional podremos, hacer pull desde el nuevo origen (en caso de tener permisos podremos hacer fetch y push)
+
+```bash 
+git pull <remoto> <rama>
+git pull upstream master
+```
+
+ƒste pull nos traer‡ los cambios del remoto, por lo que se estar‡ al d’a en el proyecto, el flujo de trabajo cambia, en adelante se estar‡ trabajando haciendo pull desde el upstream y push al origin para pasar a hacer pull request.
+
+```bash 
+git pull upstream master
+git push origin master
+```
