@@ -258,3 +258,115 @@ git pull upstream master
 git pull upstream master
 git push origin master
 ```
+
+## Rebase
+
+Solo para los repositorios locales, mala practica para los repositorios remotos.
+
+1. Desde el branch con todos los cambios, se hace el rebase. Cambia la historia del branch tomando el ultimo commit de master y le pega los cambios del repositorio local, por eso es una mala practica.
+
+```bash 
+git rebase master
+```
+
+2. Posteriormente, hay que hacer un rebase desde master, sino se hacer se genera un error super raro (confiemos en Freddy)
+```bash 
+git rebase experimento
+```
+
+## Stash 
+
+Es para guardar cambios en memoria para usarlos despues.
+
+1. Guarda las modificaciones 
+```bash 
+git stash 
+```
+
+2. Regresa a las modificaciones 
+```bash 
+git stash pop 
+```
+
+3. Ver la lista de stash 
+```bash 
+git stash list
+```
+
+4. Mover el stash a un branch 
+```bash 
+git stash branch english-version
+```
+
+5. Borrar el stash guardado sin commitear todavia
+```bash 
+git stash drop
+```
+
+## Limpiar el espacio de trabajando
+
+1. Para limpiar el espacio de trabajo es necesario hacer primero una revision de lo que se va a borrar. 
+```bash 
+git clean --dry-run
+```
+
+2. Para ejecutar el borrado usamos clean, pero ojo, a Git no le interesan las carpetas, solo los achivos que no esten en el historial. 
+```bash 
+git clean -f
+```
+
+## Traer un commit desde otra rama
+
+1. Para traer un commit desde otra rama es necesario ingresdar a la rama que se usara vcomo base y ejecutar el siguiente comando
+```bash 
+git cherry-pick hash
+```
+
+## Reconstruir un commit
+
+1. Para recontruir un commit, es necesario tener un commit y agregar cambios a ese commit (sin hacer otro commit).
+```bash 
+git commit --amend 
+```
+
+## Git Reset & Relog
+
+1. Relog te muestra todo el log, incluso de elementos elimiunados.
+```bash 
+git relog
+```
+
+2. Reset te deja el workplace con la historia del cierto Header o commit.
+
+
+SOFT
+```bash 
+git reset HEAD@{4}
+```
+
+HARD
+```bash
+git reset --HARD c894650
+```
+
+## Buscar 
+
+1. Para buscar en archivos, hay que estar en la rama correcta y usar grep.
+```bash 
+git grep <a buscar >
+```
+
+2. Buscar conociendo la linea exacta.
+```bash 
+git grep -n <a buscar>
+```
+
+3. Cantidad de veces que esta una palabra en los archivos.
+```bash 
+git grep -c <a buscar>
+```
+
+4. Buscar en los commits.
+```bash 
+git log -S "cabecera"
+```
