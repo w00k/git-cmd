@@ -370,3 +370,43 @@ git grep -c <a buscar>
 ```bash 
 git log -S "cabecera"
 ```
+
+## Comandos utiles 
+
+1. Ver los commits con los comentatios como principal
+```bash 
+git shortlog
+```
+
+2. Todas las personas que han hecho commits, incluso lo que han eliminado. 
+```bash 
+git shortlog -sn --all
+```
+
+3. Todas las personas que han hecho commits, omitiendo los merge.
+```bash 
+git shortlog -sn --all --no-merges
+```
+
+4. Generar alias en mi configuracion de Git 
+```bash 
+git config --global alias,stats "shortlog -sn --all --no-merges"
+git stats 
+```
+
+5. Quien hizo que?
+```bash 
+git blame -c archivo 
+```
+
+6. Abrir el manual de cierto comando.
+```bash 
+git blame --help
+```
+
+7. Ver los branch remotos 
+```bash 
+git branch -r
+```
+
+
